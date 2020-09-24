@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/mathsbg"
+    tools:context=".Type"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/taylor_caz"
+        android:text="SELECT TYPE"
+        android:layout_marginTop="165dp"
+        android:textSize="25sp"
+        android:id="@+id/tv_type"
+        android:layout_centerHorizontal="true"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_below="@+id/tv_type"
+        android:layout_marginTop="30dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+         android:orientation="vertical"
+        android:layout_height="wrap_content">
+    <Button
+
+        android:id="@+id/tadd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Addition "
+        android:fontFamily="@font/taylor_caz"
+        android:textColor="@color/Yellow"
+        android:background="@drawable/et_bg"
+        android:textAllCaps="false"
+        android:textSize="25sp"
+        android:textStyle="italic" />
+    <Button
+        android:fontFamily="@font/taylor_caz"
+        android:textColor="@color/Yellow"
+        android:background="@drawable/et_bg"
+        android:id="@+id/tsub"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text=" Substraction "
+        android:textAllCaps="false"
+        android:textSize="25sp"
+        android:textStyle="italic" />
+
+    <Button
+        android:fontFamily="@font/taylor_caz"
+        android:textColor="@color/Yellow"
+        android:background="@drawable/et_bg"
+        android:id="@+id/tmul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text=" Multiplication "
+        android:textAllCaps="false"
+        android:textSize="25sp"
+        android:textStyle="italic" />
+
+    <Button
+        android:fontFamily="@font/taylor_caz"
+        android:background="@drawable/et_bg"
+        android:id="@+id/tdiv"
+        android:textColor="@color/Yellow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text=" Division "
+        android:textAllCaps="false"
+        android:textSize="25sp"
+        android:textStyle="italic" />
+    </LinearLayout>
+
+
+</RelativeLayout>
