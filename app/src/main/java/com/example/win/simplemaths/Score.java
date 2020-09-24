@@ -43,8 +43,6 @@ public class Score extends AppCompatActivity {
         myDbHandler= new MyDbHandler(this,"db_highscore",null,1);
 
         SQLiteDatabase sqLiteDatabase= myDbHandler.getWritableDatabase();
-
-
         fscore = getIntent().getIntExtra("totalscore",0);
         t=getIntent().getIntExtra("true",0);
         f=getIntent().getIntExtra("false",0);
@@ -99,7 +97,7 @@ public class Score extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("text/plain");
-                intent.putExtra(Intent.EXTRA_TEXT, "Simple Maths - Fun way to learn Maths..my score:"+fscore);
+                intent.putExtra(Intent.EXTRA_TEXT, "Math Games - Fun way to learn Maths..my score is:"+fscore);
                 startActivity(intent);
             }
         });

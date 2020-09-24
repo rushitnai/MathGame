@@ -18,18 +18,20 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //initialize views
         t1=(TextView)findViewById(R.id.simplemaths);
         playbtn=(ImageButton)findViewById(R.id.play);
         sharebtn=(ImageButton)findViewById(R.id.share);
         ratebtn=(ImageButton)findViewById(R.id.rate);
 
+        // refer the app on diffrent app
         sharebtn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("text/plain");
-                intent.putExtra(Intent.EXTRA_TEXT, "Simple Maths - Fun way to learn Maths. http://www.play.google.com");
+                intent.putExtra(Intent.EXTRA_TEXT, "Math Games - Fun way to learn Maths. http://www.play.google.com");
                 startActivity(intent);
             }
         });

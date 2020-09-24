@@ -32,6 +32,7 @@ public class GameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+        //initialize  all views
         time =(TextView)findViewById(R.id.timer);
         score=(TextView)findViewById(R.id.score);
         q1 =(TextView)findViewById(R.id.que);
@@ -63,6 +64,7 @@ public class GameActivity extends AppCompatActivity {
     }
 
 
+    // set timelimit according to selected level
     public void SetDuration()
     {
         switch (Limit)
@@ -109,7 +111,7 @@ public class GameActivity extends AppCompatActivity {
 
 
 
-
+//generate questions according to math operation type and level
     public void generateQue() {
         isanscorrect=true;
 
@@ -309,7 +311,7 @@ public class GameActivity extends AppCompatActivity {
         ans.setText(String.valueOf(answer));
     }
 
-
+// handle the timer in seconds
     private void timer() {
         final Handler handler= new Handler();
         handler.post(new Runnable() {
@@ -330,6 +332,7 @@ public class GameActivity extends AppCompatActivity {
                 if(timeleft<0)
                 {
                     stoptimer=true;
+                    // pass the values to score activity via intent
                     Intent intent= new Intent(GameActivity.this,Score.class);
                     intent.putExtra("totalscore",totalscore);
                     intent.putExtra("true",t);
@@ -348,7 +351,7 @@ public class GameActivity extends AppCompatActivity {
         });
 
     }
-
+    //play buzzer when time is over
     public void PlayBuzzer(){
          MediaPlayer tune= MediaPlayer.create(this ,R.raw.tune);
         tune.start();

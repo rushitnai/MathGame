@@ -44,9 +44,11 @@ public class MyDbHandler extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        //create table of highest score
         db.execSQL(" CREATE TABLE "+ TABLE_NAME + "(" + _ID + " INTEGER PRIMARY KEY," + COL_ADD + " TEXT," + COL_SUB + " TEXT,"+
                   COL_MUL +" TEXT," + COL_DIV +" TEXT" + ");" );
 
+        //initialize all highest scoren with 0
         insertdata(1,0,0,0,0, db);
         insertdata(2,0,0,0,0, db);
         insertdata(3,0,0,0,0, db);
@@ -69,6 +71,8 @@ public class MyDbHandler extends SQLiteOpenHelper {
 
 
     }
+
+    // get the highest score form database for perticular game type and level
     public int get_Highscore(){
 
         String query;
@@ -110,6 +114,7 @@ public class MyDbHandler extends SQLiteOpenHelper {
         return highscore;
     }
 
+    //if current score is highest score then set it to database as highest for that game type and level
     public void setHighscore(int highscore){
 
         SQLiteDatabase db = this.getWritableDatabase();
