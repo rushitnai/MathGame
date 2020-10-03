@@ -1,6 +1,5 @@
 
-An App where a students of class 1 to 9 can play a game on basic mathmatics operations as per their choices and levels in limited time period
-and get instant result.they can improve their basic math skills.<br>
+<br>
 # Tech Stack
 Android SDK<br>
 Java<br>
