@@ -1,5 +1,5 @@
 
-<br>
+
 # Tech Stack
 Android SDK<br>
 Java<br>
